@@ -1,0 +1,35 @@
+title: Goshen Garden
+email: doug@goshen.garden
+description: >-
+  A micro farm in Goshen, Ohio. Notes on growing, the land, and what it
+  means to produce something real.
+baseurl: ""
+url: "https://goshen.garden"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
