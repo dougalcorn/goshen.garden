@@ -1,0 +1,219 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ============================================
+   Goshen Garden — Custom Theme
+   Palette: Sage, Forest Green, Earthy Brown,
+            Cream, Creamy White
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --cream-white:   #F7F4EE;
+  --cream:         #EDE7D9;
+  --sage:          #8A9E7E;
+  --forest:        #3B5C3F;
+  --brown:         #6B4F3A;
+  --text:          #2C2416;
+  --text-light:    #6B6254;
+  --border:        #D4C9B5;
+}
+
+/* Base */
+body {
+  background-color: var(--cream-white);
+  color: var(--text);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--forest);
+  border-top: none;
+  border-bottom: 3px solid var(--brown);
+}
+
+.site-title,
+.site-title:visited {
+  color: var(--cream-white);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-title:hover {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.site-nav {
+  background-color: var(--forest);
+}
+
+.site-nav .page-link {
+  color: var(--cream);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-nav .page-link:hover {
+  color: var(--cream-white);
+  text-decoration: none;
+}
+
+.site-nav .nav-trigger ~ label {
+  color: var(--cream-white);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--cream);
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.site-footer a,
+.site-footer a:visited {
+  color: var(--forest);
+}
+
+/* Main content */
+.page-content {
+  background-color: var(--cream-white);
+  padding-top: 2.5rem;
+}
+
+.wrapper {
+  max-width: 740px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  color: var(--forest);
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: 1.9rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.4rem; margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+h3 { font-size: 1.15rem; color: var(--brown); }
+
+.page-title,
+.post-title {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: var(--forest);
+}
+
+/* Links */
+a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-decoration-color: var(--sage);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--brown);
+  text-decoration-color: var(--brown);
+}
+
+a:visited {
+  color: var(--forest);
+}
+
+/* Nav links (home page) */
+.post-content a,
+.page-content a {
+  color: var(--forest);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  margin: 1.5rem 0;
+}
+
+/* Image captions (italics after image) */
+img + em {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--sage);
+  color: var(--text-light);
+  font-style: italic;
+  padding-left: 1.2rem;
+  margin-left: 0;
+}
+
+/* Post list (journal) */
+.post-list li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+  list-style: none;
+}
+
+.post-list .post-link {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.post-meta {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+}
+
+/* Home page nav links */
+.home-nav {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* Mobile nav */
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--forest);
+    border: 1px solid var(--brown);
+  }
+}
